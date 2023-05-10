@@ -97,6 +97,6 @@ class ResolvingResult implements ResolvingResultContract
             return !str_contains($trace['file'] ?? '', 'vendor/');
         })->first();
 
-        return 'File:' . $location['file'] . '  Line:' . $location['line'];
+        return 'File:' . $location['file']??'' . '  Line:' . $location['line']??'';
     }
 }
